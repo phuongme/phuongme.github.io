@@ -1,0 +1,253 @@
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: white;
+}
+
+.fs-small {
+  font-size: .875rem;
+}
+
+.fs-big {
+  font-size: calc(2.5rem + 1.5vw) !important;
+}
+
+.logo__img {
+  height: 2.3rem;
+}
+
+.bg__dark {
+  background-color: #08091b !important;
+}
+
+.bg-gradient {
+  background-color: #21d4fd !important;
+  background-image: linear-gradient(19deg, #21d4fd, #b721ff) !important;
+}
+
+
+
+.btn__outline:not(:hover) {
+  background-color: transparent !important;
+}
+
+.btn__round,
+.btn__round:before {
+  border-radius: 40px !important;
+}
+
+.btn__gradient {
+  position: relative;
+  border: none;
+  background-image: linear-gradient(to right, #46bdf4 0%, #2b56f5 100%);
+  color: white;
+  font-size: 12px;
+  padding: .6rem 1.2rem !important;
+}
+
+.btn__gradient::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  border-radius: 5px;
+  opacity: 0;
+  transition: all .5s;
+  background-image: linear-gradient(to right, #2b56f5 0%, #46bdf4 100%);
+}
+
+.btn__gradient-2 {
+  background-image: linear-gradient(to right, #7a0fff 0%, #46bdf4 100%);
+}
+
+.btn__outline span {
+  position: relative;
+  color: white;
+  z-index: 3;
+}
+
+.btn__outline {
+  color: white;
+}
+
+.btn__outline:hover::before {
+  opacity: 0;
+}
+
+.btn__outline::before {
+  background-image: none;
+  background-color: #0b0c22;
+  opacity: 1;
+  margin: 2px;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  z-index: 2;
+}
+
+.bg__header {
+  background-image: url('../images/mask-c-dark.svg');
+  background-position: bottom center;
+  background-repeat: no-repeat;
+}
+
+.dropdown-menu {
+  background: #191d47;
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+  color: #6896ff !important;
+  background-color: transparent;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff;
+  font-size: 12px;
+}
+
+.navbar-dark .navbar-toggler {
+  border: 0;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #46bdf4;
+}
+
+.btn-gradient {
+  background: linear-gradient(to right, rgb(109, 202, 255), rgb(160, 38, 255));
+  border: none;
+  color: white;
+  transition: all 150ms linear;
+}
+
+.btn-dark {
+  background: rgb(43, 37, 53);
+  border: none;
+  color: white;
+  transition: all 150ms linear;
+}
+
+.btn-dark:hover,
+.btn-gradient:hover {
+  background: rgb(127, 143, 255);
+  color: white;
+}
+
+.mt-8 {
+  margin-top: 8rem;
+}
+
+.about__img--left {
+  max-height: 580px;
+  border-radius: 25px;
+}
+
+.about__img--right {
+  height: 24rem;
+}
+
+.intro-partner__img {
+  transition: all .1s linear;
+  border-radius: .75rem;
+}
+
+.intro-partner__img:hover {
+  background-color: rgba(160, 38, 255, 1);
+}
+
+.partner__with--wrap {
+  background-color: rgba(242, 244, 247, 0.1);
+  border-radius: 5px;
+}
+
+.text-stroke {
+  -webkit-text-stroke-color: #fff !important;
+  -webkit-text-stroke-width: 1px;
+  color: transparent;
+}
+
+.fw-100 {
+  font-weight: 100;
+}
+
+.text-gray {
+  color: #a2b4d2;
+  font-weight: 300;
+}
+
+.text-blue {
+  color: rgb(104, 150, 255);
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.space-x-8>:not([hidden])~:not([hidden]) {
+  margin-left: calc(2rem * 1);
+}
+
+.space-x-4>:not([hidden])~:not([hidden]) {
+  margin-left: calc(1rem * 1);
+}
+
+.footer-top {
+  margin-top: 5rem;
+}
+
+.fixed-top.scrolled {
+  background-color: black !important;
+  transition: background-color 200ms linear;
+}
+
+.mt-6 {
+  margin-top: 4rem;
+}
+
+.mt-7 {
+  margin-top: 5rem;
+}
+
+.intro__social--item {
+  transition: all 0.3s;
+  background-color: rgba(255, 255, 255, 0.15);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro__social--item:hover {
+  background-color: #46bdf4;
+}
+
+.intro__social--item i {
+  font-size: 12px;
+}
+@media (min-width: 422px) {}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {}
+
+@media (max-width: 992px) {}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 576px) {}
+
+@media (max-width: 422px) {}
+
+@media (max-width: 375px) {}

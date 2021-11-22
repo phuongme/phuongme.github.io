@@ -20,7 +20,7 @@
 <body>
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-2">
-      <div class="container-fluid align-items-center">
+      <div class="container align-items-center">
         <a class="navbar-brand d-flex align-items-center" href="#">
           <img src="./assets/images/logo-white2x.png" class="img-fluid logo__img" alt="">
         </a>
@@ -87,10 +87,11 @@
       </div>
     </nav>
   </header>
-  <section id="intro" class="bg__dark pb-5 bg__header" style="padding-top:calc(50px + 5vh);">
+  <section id="intro" class="bg__dark pb-5 bg__header" style="padding-top:calc(50px + 10vh);">
+    <div id="particles-js" class="particles-bg"></div>
     <div class="container">
-      <div class="row">
-        <div class="col-lg-6">
+      <div class="row justify-content-center justify-content-lg-between">
+        <div class="col-lg-5">
           <div class="text-center text-lg-start">
             <video id="vidyo" autoplay="autoplay" loop="loop" muted="" playsinline="">
               <source src="./assets/images/siftoken.mp4" type="video/mp4">
@@ -102,9 +103,11 @@
           <p class="my-4 text-gray text-center text-lg-start">Global decentralize network to buy & sell tokens</p>
           <div class="d-flex align-items-center justify-content-center justify-content-md-start">
             <a href="#" class="btn__gradient text-uppercase btn__round text-decoration-none">Sign up to join</a>
-            <a href="#" class="ms-3 ms-md-4 btn__gradient text-uppercase btn__round btn__gradient-2 text-decoration-none">Token Distribution</a>
+            <a href="#"
+              class="ms-3 ms-md-4 btn__gradient text-uppercase btn__round btn__gradient-2 text-decoration-none">Token
+              Distribution</a>
           </div>
-          <div class="intro__social mt-4 d-flex space-x-4">
+          <div class="intro__social mt-5 d-flex space-x-4">
             <a href="#" class="text-white text-decoration-none intro__social--item">
               <i class="fa fa-facebook"></i>
             </a>
@@ -125,6 +128,115 @@
             </a>
           </div>
         </div>
+        <div class="col-lg-6">
+          <div
+            class="intro__right position-relative text-center h-100 d-flex align-items-center justify-content-center">
+            <div class="line__circle">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+            </div>
+            <div class="intro__right--wrap w-100">
+              <h6>SIF TOKEN PAYMENT ADDRESS</h6>
+              <img src="./assets/images/qr-siftoken.png" class="img-fluid intro__right--qr" alt="">
+              <p class="text-gray mt-2">** Use for payment BEP-20</p>
+              <img src="./assets/images/21.png" class="img-fluid" alt="">
+              <h6 class="mt-3">PRE-SALE TOTAL SALES RATE</h6>
+              <div class="progress progress__blue progress__nostripes w-50 mx-auto">
+                <span style="width:85%">%92</span>
+              </div>
+
+              <div class="airdrop__count-down d-flex justify-content-center space-x-4 py-3 mt-4 text-white">
+                <div class="airdrop__count-down-item d-flex justify-content-center flex-column text-center">
+                  <div class="airdrop__count-down-item--number lh-1 text-center">
+                    <span id="days" class="fs-1">00</span>
+                  </div>
+                  <div class="airdrop__count-down-item--label">
+                    <span class="text-gray fs-small">Days</span>
+                  </div>
+                </div>
+                <div class="airdrop__count-down-item d-flex justify-content-start flex-column text-center">
+                  <div class="airdrop__count-down-item--number lh-1 text-center">
+                    <span id="days" class="fs-1">:</span>
+                  </div>
+                </div>
+                <div class="airdrop__count-down-item d-flex justify-content-center flex-column text-center">
+                  <div class="airdrop__count-down-item--number lh-1 text-center">
+                    <span id="hours" class="fs-1">00</span>
+                  </div>
+                  <div class="airdrop__count-down-item--label">
+                    <span class="text-gray fs-small">Hours</span>
+                  </div>
+                </div>
+                <div class="airdrop__count-down-item d-flex justify-content-start flex-column text-center">
+                  <div class="airdrop__count-down-item--number lh-1 text-center">
+                    <span id="days" class="fs-1">:</span>
+                  </div>
+                </div>
+                <div class="airdrop__count-down-item d-flex justify-content-center flex-column text-center">
+                  <div class="airdrop__count-down-item--number lh-1 text-center">
+                    <span id="minutes" class="fs-1">00</span>
+                  </div>
+                  <div class="airdrop__count-down-item--label">
+                    <span class="text-gray fs-small">Min</span>
+                  </div>
+                </div>
+                <div class="airdrop__count-down-item d-flex justify-content-start flex-column text-center">
+                  <div class="airdrop__count-down-item--number lh-1 text-center">
+                    <span id="days" class="fs-1">:</span>
+                  </div>
+                </div>
+                <div class="airdrop__count-down-item d-flex justify-content-center flex-column text-center">
+                  <div class="airdrop__count-down-item--number lh-1 text-center">
+                    <span id="seconds" class="fs-1">00</span>
+                  </div>
+                  <div class="airdrop__count-down-item--label">
+                    <span class="text-gray fs-small">Sec</span>
+                  </div>
+                </div>
+              </div>
+              <div class="intro__social mt-1 d-flex space-x-4 justify-content-center">
+                <a href="#" class="text-white text-decoration-none">
+                  <i class="fa fa-bitcoin"></i>
+                </a>
+                <a href="#" class="text-white text-decoration-none">
+                  <i class="fa fa-usd"></i>
+                </a>
+                <a href="#" class="text-white text-decoration-none">
+                  <i class="fa fa-cc-visa"></i>
+                </a>
+                <a href="#" class="text-white text-decoration-none">
+                  <i class="fa fa-cc-mastercard"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="platform" class="py-5">
+    <div class="container">
+      <div class="row align-items-center justify-content-lg-between justify-content-center">
+        <div class="col-lg-6">
+          <h2 class="text__dark fw-500">We’ve built a platform <br> to do well out of stakeholders.</h3>
+          <p class="text__dark fs-5 mt-4 fw-300">
+            SIF TOKEN is a SIFIRINCIFILO initiative that takes its power from binance smart chain. The purpose of
+            existence is to provide funds for the project and initiative ecosystem created. For this reason, SIF Token
+            will provide funding support to SIFIRINCIFILO initiatives, not just to be traded in the markets. This shows
+            that there is always an infinite transformation for SIF TOKEN. When you, our esteemed stakeholders, have SIF
+            TOKEN, you will also support many project owners and entrepreneurs. In addition, we plan to offer many ways
+            to obtain SIF TOKEN for you and continue our work on it. You will be able to earn SIF TOKEN with our games
+            in development and various competitions. Our aim is to always make SIF TOKEN valuable in an endless cycle
+            and to provide future profits to our investors. With the ecosystem we have created, you can buy, exchange,
+            earn and sell SIF TOKEN.
+          </p>
+        </div>
+        <div class="col-lg-4">
+          <img src="./assets/images/gfx-z-a.png" class="img-fluid" alt="">
+        </div>
       </div>
     </div>
   </section>
@@ -133,6 +245,7 @@
 
   <script src="./assets/vendor/jquery/jquery.min.js"></script>
   <script src="./assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="./assets/vendor/particles/particles.min.js"></script>
   <script src="./assets/js/main.js"></script>
 </body>
 

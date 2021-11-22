@@ -20,12 +20,22 @@ body {
   background-color: #08091b !important;
 }
 
+.text__dark {
+  color: #28384c;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-300 {
+  font-weight: 300;
+}
+
 .bg-gradient {
   background-color: #21d4fd !important;
   background-image: linear-gradient(19deg, #21d4fd, #b721ff) !important;
 }
-
-
 
 .btn__outline:not(:hover) {
   background-color: transparent !important;
@@ -41,7 +51,7 @@ body {
   border: none;
   background-image: linear-gradient(to right, #46bdf4 0%, #2b56f5 100%);
   color: white;
-  font-size: 12px;
+  font-size: 14px;
   padding: .6rem 1.2rem !important;
 }
 
@@ -105,7 +115,7 @@ body {
 
 .navbar-dark .navbar-nav .nav-link {
   color: #fff;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .navbar-dark .navbar-toggler {
@@ -232,15 +242,132 @@ body {
 }
 
 .intro__social--item i {
-  font-size: 12px;
+  font-size: 14px;
+}
+
+.particles-bg {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0 !important;
+}
+
+.line__circle {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.intro__right .line__circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  width: 100%;
+}
+
+.line__circle .line:nth-child(1) {
+  left: 0;
+}
+
+.line__circle .line:nth-child(2) {
+  left: 20px;
+}
+
+.line__circle .line:nth-child(3) {
+  left: 45px;
+}
+
+.line__circle .line:nth-child(4) {
+  left: 65px;
+}
+
+.line__circle [class*="line"] {
+  position: absolute;
+  top: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(70, 189, 244, 0.2);
+  height: 100%;
+  width: calc(100% - 80px);
+}
+
+.intro__right--qr {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+.progress {
+  box-sizing: content-box;
+  height: 30px;
+  position: relative;
+  margin: 60px 0 20px 0;
+  background: #000;
+  border-radius: 30px;
+  padding: 10px;
+  box-shadow: inset 0 -1px 1px rgb(255 255 255 / 30%);
+  line-height: 30px;
+}
+
+.progress__blue>span {
+  background-image: linear-gradient(#5b75f9, #4ab1f6);
+}
+
+
+
+.progress>span {
+  display: block;
+  height: 100%;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: rgb(43, 194, 83);
+  background-image: linear-gradient(center bottom, rgb(43, 194, 83) 37%, rgb(84, 240, 84) 69%);
+  box-shadow: inset 0 2px 9px rgb(255 255 255 / 30%), inset 0 -2px 6px rgb(0 0 0 / 40%);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.progress>span:after,
+.progress__animate>span>span {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
+  z-index: 1;
+  background-size: 50px 50px;
+  animation: move 2s linear infinite;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  overflow: hidden;
+}
+
+.progress__nostripes>span>span,
+.progress__nostripes>span::after {
+  background-image: none;
 }
 @media (min-width: 422px) {}
 
 @media (min-width: 768px) {}
 
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+  
+}
 
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+  .intro__right .line__circle {
+    display: block;
+  }
+}
 
 @media (max-width: 992px) {}
 

@@ -612,6 +612,12 @@ body {
 .bg__gray {
   background-color: #eff6ff !important;
 }
+.new__meta--item {
+  padding: 0 .5rem;
+}
+.new__meta {
+  margin: 0 -.5rem;
+}
 .new__meta .new__meta--item {
   position: relative;
 }
@@ -637,6 +643,9 @@ body {
 }
 .new__item--content {
   border-radius: 0 0 6px 6px;
+}
+.a:hover {
+  color: #46bdf4 !important;
 }
 @keyframes playbutton {
   0% {

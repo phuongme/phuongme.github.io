@@ -69,6 +69,14 @@ body {
   background-image: linear-gradient(to right, #2b56f5 0%, #46bdf4 100%);
 }
 
+.btn__gradient:hover {
+  color: white;
+}
+
+.btn__gradient:hover::before {
+  opacity: 1;
+}
+
 .btn__gradient-2 {
   background-image: linear-gradient(to right, #7a0fff 0%, #46bdf4 100%);
 }
@@ -460,9 +468,11 @@ body {
   color: #28384c;
   transform: translate(-50%, -50%);
 }
+
 .sale__list--item--title {
   position: relative;
 }
+
 .sale__list--item--title::before {
   position: absolute;
   top: 8px;
@@ -479,6 +489,155 @@ body {
   border-radius: 6px !important;
 }
 
+.roadmap {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+
+.roadmap__list {
+  position: relative;
+  padding-top: 15px;
+}
+
+.roadmap__list--item--wrap {
+  padding: 0 25px 30px;
+}
+
+.roadmap__list--item--wrap:before {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 1px;
+  content: '';
+  transform: translateX(-50%);
+  background-image: linear-gradient(to bottom, #2b56f5 0%, #7a0fff 100%);
+}
+
+.roadmap-done .roadmap__title-2:before {
+  height: 19px;
+  width: 19px;
+  font-family: "FontAwesome";
+  content: '\f00c';
+  font-weight: 900;
+  font-size: 9px;
+  line-height: 18px;
+  text-align: center;
+  color: #39d884;
+  background: #fff;
+}
+
+.roadmap__title-2:before {
+  position: absolute;
+  content: '';
+  left: -25px;
+  top: 1px;
+  transform: translate(-50%, 0);
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: #2b56f5;
+  border: 1px solid #2b56f5;
+}
+
+.roadmap__list--item:nth-child(even) .roadmap__list--item--wrap:before {
+  background-image: linear-gradient(to top, #2b56f5 0%, #7a0fff 100%);
+}
+
+.roadmap__title {
+  color: #c4afff;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.roadmap__title-2 {
+  position: relative;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #2b56f5;
+  top: -10px;
+}
+
+.roadmap__list--item {
+  position: relative;
+}
+
+.roadmap__list:after {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 1px;
+  content: '';
+  background: #7a0fff;
+}
+
+.roadmap__wrap, #sale, #team {
+  overflow: hidden;
+}
+
+.team__item--img {
+  border-radius: 50%;
+  max-width: 150px;
+  margin: 0 auto;
+}
+
+.text-violet {
+  color: #9947ff;
+}
+.horizontal__line {
+  position: relative;
+}
+.horizontal__line:before {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  content: "";
+  height: 80px;
+  width: 2px;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(to top, #46bdf4 0%, #2b56f5 100%);
+  z-index: 3;
+}
+.partner__img {
+  max-height: 100px;
+  margin: 0 auto;
+}
+.bg__gray {
+  background-color: #eff6ff !important;
+}
+.new__meta .new__meta--item {
+  position: relative;
+}
+.new__meta .new__meta--item:not(:last-child):after {
+  content: '|';
+  position: absolute;
+  right: -3px;
+  top: -1px;
+  color: #28384c;
+}
+.new__meta .new__meta--item:not(:last-child):after {
+  color: #8284a5;
+}
+.bg__violet {
+  background-color: #10122d;
+}
+.new__item {
+  border-radius: 6px;
+    box-shadow: 0 5px 45px 0 rgb(18 24 58 / 8%);
+}
+.new__item--img {
+  border-radius: 6px 6px 0 0;
+}
+.new__item--content {
+  border-radius: 0 0 6px 6px;
+}
 @keyframes playbutton {
   0% {
     transform: scale(0.75);
@@ -503,11 +662,70 @@ body {
   .title__blur {
     font-size: 2.3rem;
   }
+  .horizontal__line:before {
+    height: 100px;
+  }
 }
 
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+  .horizontal__line:before {
+    height: 120px;
+  }
+}
 
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+  .roadmap__list--item--sm {
+    min-height: 170px;
+  }
+
+  .roadmap__list--item {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+
+  .roadmap__list--item:nth-child(even) {
+    flex-grow: 0;
+    width: 0;
+  }
+
+  .roadmap__list--item:nth-child(even) .roadmap__list--item--wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 90px;
+    min-width: 190px;
+    transform: translateX(calc(-50% + 5px));
+  }
+
+  .roadmap__list--item:nth-child(even) .roadmap__list--item--wrap:before {
+    top: 0;
+    height: 90px;
+  }
+
+  .roadmap__list {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: calc(5rem + 30vh);
+    position: relative;
+    padding-top: 15px;
+  }
+
+  .roadmap__list--item--lg {
+    min-height: 300px;
+  }
+
+  .roadmap__title-2 {
+    font-size: 1rem;
+  }
+
+  .roadmap__title {
+    font-size: 18px;
+  }
+  .horizontal__line:before {
+    height: 160px;
+  }
+}
 
 @media (max-width: 1200px) and (min-width: 992px) {
 

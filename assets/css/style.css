@@ -158,9 +158,11 @@ body {
   background: rgb(127, 143, 255);
   color: white;
 }
+
 .mt-6 {
   margin-top: 5rem;
 }
+
 .mt-8 {
   margin-top: 8rem;
 }
@@ -763,9 +765,11 @@ body {
   background-repeat: no-repeat;
   background-size: 50%;
 }
+
 .copyright {
   font-size: 13px;
 }
+
 @keyframes playbutton {
   0% {
     transform: scale(0.75);
@@ -882,6 +886,7 @@ body {
   .mt-8 {
     margin-top: 5rem;
   }
+
   .contact.space-x-8>:not([hidden])~:not([hidden]) {
     margin-left: 0 !important;
   }

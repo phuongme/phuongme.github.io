@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIF TOKEN & SIFIRINCIFILO Ecosystem Investor Cryptocurrency</title>
-    <link rel="icon" href="./assets/images/favicon.png" type="image/x-icon">
+    <title>test</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -16,229 +15,415 @@
     <link rel="stylesheet" href="./assets/vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <style>
-        body {
-            background-color: #39d884;
-
+        .nav__tab--link {
+            border-bottom: 2px solid #eee !important;
+            color: rgba(40, 56, 76, 0.6);
+            font-weight: 400;
+            transition: all .4s;
         }
 
-        .roadmap {
-            width: 100%;
-            position: relative;
-            z-index: 1;
-            overflow: hidden;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
+        .nav__tab--link:hover {
+            color: #46bdf4;
         }
 
-
-        .roadmap__list {
-            position: relative;
-            padding-top: 15px;
+        .nav__tab--item {
+            padding: 0;
         }
 
-        .roadmap__list--item--wrap {
-            padding: 0 25px 30px;
+        .nav__tab--item a {
+            border-radius: 0 !important;
+            background-color: transparent !important;
         }
 
-        .roadmap__list--item--wrap:before {
-            position: absolute;
-            left: 0;
-            height: 100%;
-            width: 1px;
-            content: '';
-            transform: translateX(-50%);
-            background-image: linear-gradient(to bottom, #2b56f5 0%, #7a0fff 100%);
+        .nav__tab--item .active {
+            border-bottom: 2px solid #46bdf4 !important;
+            color: #46bdf4 !important;
         }
 
-        .roadmap-done .roadmap__title-2:before {
-            height: 19px;
-            width: 19px;
-            font-family: "FontAwesome";
-            content: '\f00c';
-            font-weight: 900;
-            font-size: 9px;
-            line-height: 18px;
-            text-align: center;
-            color: #39d884;
-            background: #fff;
+        .nav__tab .tab-pane {
+            transition: opacity 0.15s linear;
         }
 
-        .roadmap__title-2:before {
-            position: absolute;
-            content: '';
-            left: -25px;
-            top: 1px;
-            transform: translate(-50%, 0);
-            height: 15px;
-            width: 15px;
-            border-radius: 50%;
-            background: #2b56f5;
-            border: 1px solid #2b56f5;
+        .accordion__custom .accordion-item:first-of-type .accordion-button,
+        .accordion__custom .accordion-item:first-of-type {
+            border-radius: 0 !important;
         }
 
-        .roadmap__list--item:nth-child(even) .roadmap__list--item--wrap:before {
-            background-image: linear-gradient(to top, #2b56f5 0%, #7a0fff 100%);
+        .accordion__custom .accordion-item .accordion-button {
+            color: #28384c !important;
+            font-size: 1.2rem;
         }
 
-        .roadmap__title {
-            color: #c4afff;
-            font-weight: 700;
-            font-size: 16px;
+        .accordion__custom .accordion-item .accordion-body {
+            color: #8284a5 !important;
+            font-size: 15px;
+            font-weight: 300;
         }
 
-        .roadmap__title-2 {
-            position: relative;
-            font-size: 1rem;
-            font-weight: 500;
-            color: #2b56f5;
-            top: -10px;
+        .accordion__custom .accordion-item .accordion-button:focus {
+            outline: none !important;
+            box-shadow: none !important;
         }
 
-        .roadmap__list--item {
-            position: relative;
+        .accordion__custom .accordion-item,
+        .accordion__custom .accordion-item .accordion-button {
+            background-color: #eff6ff !important;
         }
 
-        .roadmap__list:after {
-            position: absolute;
-            left: 50%;
-            bottom: 0;
-            transform: translateX(-50%);
-            width: 100vw;
-            height: 1px;
-            content: '';
-            background: #7a0fff;
+        .accordion__custom .accordion-item {
+            border: 0;
         }
 
-        @media (min-width: 992px) {
-            .roadmap__list--item--sm {
-                min-height: 170px;
-            }
+        .accordion__custom .accordion-item:not(:last-child) {
+            border-bottom: 1px solid #dbe4f7;
+        }
 
-            .roadmap__list--item {
-                flex-basis: 0;
-                flex-grow: 1;
-                max-width: 100%;
-            }
-
-            .roadmap__list--item:nth-child(even) {
-                flex-grow: 0;
-                width: 0;
-            }
-
-            .roadmap__list--item:nth-child(even) .roadmap__list--item--wrap {
-                position: absolute;
-                top: 0;
-                left: 0;
-                padding-top: 90px;
-                min-width: 190px;
-                transform: translateX(calc(-50% + 5px));
-            }
-
-            .roadmap__list--item:nth-child(even) .roadmap__list--item--wrap:before {
-                top: 0;
-                height: 90px;
-            }
-
-            .roadmap__list {
-                display: flex;
-                align-items: flex-end;
-                margin-bottom: calc(5rem + 30vh);
-                position: relative;
-                padding-top: 15px;
-            }
-
-            .roadmap__list--item--lg {
-                min-height: 300px;
-            }
-
-            .roadmap__title-2 {
-                font-size: 1rem;
-            }
-
-            .roadmap__title {
-                font-size: 18px;
-            }
+        .accordion__custom .accordion-item .accordion-button::after {
+            width: 1rem;
+            height: 1rem;
+            background-size: 1rem;
+        }
+        .accordion__custom .accordion-item .accordion-button:not(.collapsed) {
+            box-shadow: none;
+        }
+        .nav__tab .tab-pane.active .accordion__custom .accordion-item, .nav__tab .tab-pane.active .accordion__custom .accordion-item .accordion-button {
+            background-color: rgba(239, 246, 255, 0.7) !important;
         }
     </style>
 </head>
 
 <body>
     <section>
-        <div class="roadmap">
-            <div class="container">
-                <div class="roadmap__list">
-                    <div class="roadmap__list--item roadmap__list--item--sm roadmap-done">
-                        <div class="roadmap__list--item--wrap">
-                            <h6 class="roadmap__title roadmap__title-2">Q1 2019</h6>
-                            <p>Creating the SIFIRINCIFILO ecosystem idea and the core team.</p>
-                        </div>
-                    </div><!-- .roadmap__list--item -->
-                    <div class="roadmap__list--item roadmap-done">
-                        <div class="roadmap__list--item--wrap">
-                            <h6 class="roadmap__title roadmap__title-2"> Q3 2019</h6>
-                            <p>To review purchases and ideas to the team</p>
+        <div class="container">
+            <div class="nav__tab">
+                <ul class="nav nav-pills text-center nav__tab--pills">
+                    <li class="nav-item nav__tab--item col">
+                        <a class="nav-link nav__tab--link active" data-bs-toggle="pill" href="#geberal">General</a>
+                    </li>
+                    <li class="nav-item nav__tab--item col">
+                        <a class="nav-link nav__tab--link" data-bs-toggle="pill" href="#pre">Pre-ICO & ICO</a>
+                    </li>
+                    <li class="nav-item nav__tab--item col">
+                        <a class="nav-link nav__tab--link" data-bs-toggle="pill" href="#sif">What's SIF</a>
+                    </li>
+                    <li class="nav-item nav__tab--item col">
+                        <a class="nav-link nav__tab--link" data-bs-toggle="pill" href="#token">Token</a>
+                    </li>
+                    <li class="nav-item nav__tab--item col">
+                        <a class="nav-link nav__tab--link" data-bs-toggle="pill" href="#legal">Legal</a>
+                    </li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content mt-4">
+                    <div class="tab-pane px-0 active" id="geberal">
+                        <div class="accordion accordion__custom" id="accordionOne">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        What is Crypto?
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOne" data-bs-parent="#accordionOne">
+                                    <div class="accordion-body">
+                                        The word crypto can be thought of as the act of hiding, secret. cryptology is a set of studies developed to prevent unwanted information from falling into the hands of unwanted people.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        What does it mean cryptocurrencies?
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordionOne">
+                                    <div class="accordion-body">
+                                        From the first money ordered to be produced by the Lydian king before Christ until today, the economy has been based on concrete values.It was inevitable that this 2700-year-old tradition would evolve into another dimension thanks to technology.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThreeLegal">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        How can I use cryptocurrencies?
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#accordionOne">
+                                    <div class="accordion-body">
+                                        It is used as a payment system in many developed and developing countries thanks to hardware and software wallets. You can pay from your wallet like a credit card, and you can receive payments in a way that a credit card cannot.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFour" aria-expanded="false"
+                                        aria-controls="collapseFour">
+                                        Where can i learn news about cryptocurrencies?
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse"
+                                    aria-labelledby="headingFour" data-bs-parent="#accordionOne">
+                                    <div class="accordion-body">
+                                        On the subject of crypto; It can receive information from platforms such as bitcointalk, medium, publish0x. For newly released and traded crypto assets, you can visit coinmarketcap and coingecko.
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="roadmap__list--item roadmap__list--item--lg roadmap-done">
-                        <div class="roadmap__list--item--wrap">
-                            <h6 class="roadmap__title roadmap__title-2">Q1 2020</h6>
-                            <p>Preparation of accounting solutions for token launch</p>
+                    <div class="tab-pane container fade" id="pre">
+                        <div class="accordion accordion__custom" id="accordionTwo">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOneIco">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOneIco" aria-expanded="true" aria-controls="collapseOneIco">
+                                        What is ICO?
+                                    </button>
+                                </h2>
+                                <div id="collapseOneIco" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOneIco" data-bs-parent="#accordionTwo">
+                                    <div class="accordion-body">
+                                        Initial currency offering (ICO) is a method of collecting funds through crypto money for project development..The first token sale can be carried out on its own website or through a brokerage firm.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwoIco">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwoIco" aria-expanded="false" aria-controls="collapseTwoIco">
+                                        What makes an ICO project safe?
+                                    </button>
+                                </h2>
+                                <div id="collapseTwoIco" class="accordion-collapse collapse" aria-labelledby="headingTwoIco"
+                                    data-bs-parent="#accordionTwo">
+                                    <div class="accordion-body">
+                                        ICO projects must have a roadmap. Project content and aim should be specified. There should be reasonable rates for token allocation. It should be priced in proportion to the total amount of supply and the amount of investment.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThreeIco">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThreeIco" aria-expanded="false"
+                                        aria-controls="collapseThreeIco">
+                                        What will happen after the ICO?
+                                    </button>
+                                </h2>
+                                <div id="collapseThreeIco" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThreeIco" data-bs-parent="#accordionTwo">
+                                    <div class="accordion-body">
+                                        The primary goal for an ICO is to collect investments before they are listed on an exchange. Investments are used in the development of the project and are traded on stock exchanges if the project progresses successfully..
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFourIco">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFourIco" aria-expanded="false"
+                                        aria-controls="collapseFourIco">
+                                        Is ICO investment risky?
+                                    </button>
+                                </h2>
+                                <div id="collapseFourIco" class="accordion-collapse collapse"
+                                    aria-labelledby="headingFourIco" data-bs-parent="#accordionTwo">
+                                    <div class="accordion-body">
+                                        All crypto asset investments are risky. If the promised project goals deviate from time and course, the project may be failing. In this case, there will be no return on the investment made..
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="roadmap__list--item roadmap-done">
-                        <div class="roadmap__list--item--wrap">
-                            <h6 class="roadmap__title roadmap__title-2">Q2 2020</h6>
-                            <p>Starting token trials and planning the roadmap</p>
+                    <div class="tab-pane container fade" id="sif">
+                        <div class="accordion accordion__custom" id="accordionThree">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOneSif">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOneSif" aria-expanded="true" aria-controls="collapseOneSif">
+                                        How can i find SIF?
+                                    </button>
+                                </h2>
+                                <div id="collapseOneSif" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOneSif" data-bs-parent="#accordionThree">
+                                    <div class="accordion-body">
+                                        It comes from the name of the team that created the project idea. The SIFirincifilo team wanted to make a reference to mythology while adding a piece of its own name to its initiative to raise funds with crypto assets.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwoSif">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwoSif" aria-expanded="false" aria-controls="collapseTwoSif">
+                                        Who is SIF?
+                                    </button>
+                                </h2>
+                                <div id="collapseTwoSif" class="accordion-collapse collapse" aria-labelledby="headingTwoSif"
+                                    data-bs-parent="#accordionThree">
+                                    <div class="accordion-body">
+                                        A hero in Norse mythology. Thor's lover is Heimdall's sister. Her golden blonde hair represents abundance.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThreeSif">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThreeSif" aria-expanded="false"
+                                        aria-controls="collapseThreeSif">
+                                        Why SIF?
+                                    </button>
+                                </h2>
+                                <div id="collapseThreeSif" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThreeSif" data-bs-parent="#accordionThree">
+                                    <div class="accordion-body">
+                                        We believed that Sif, who is also a goddess of harvest, will bring us abundance and fertility.She is very rare to find a perfect thing that combines power, abundance, splendor and harmony.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFourSif">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFourSif" aria-expanded="false"
+                                        aria-controls="collapseFourSif">
+                                        SIF of present?
+                                    </button>
+                                </h2>
+                                <div id="collapseFourSif" class="accordion-collapse collapse"
+                                    aria-labelledby="headingFourSif" data-bs-parent="#accordionThree">
+                                    <div class="accordion-body">
+                                        Sif has inspired the name of a volcano on the planet Venus. Sif's characterization in modern media tends to be much more martial than in the original sources. The Marvel Comics character, Sif, is based on the Sif of Norse myth and is portrayed by Jaimie Alexander in the Marvel Studios film Thor. Video games as "Great Grey Wolf Sif"
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="roadmap__list--item roadmap__list--item--sm roadmap-done">
-                        <div class="roadmap__list--item--wrap">
-                            <h6 class="roadmap__title roadmap__title-2">Q1 2021</h6>
-                            <p>Creating trial TOKEN on BSC Blockchain</p>
+                    <div class="tab-pane container fade" id="token">
+                        <div class="accordion accordion__custom" id="accordionFour">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOneToken">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOneToken" aria-expanded="true" aria-controls="collapseOneToken">
+                                        What is Blockchain?
+                                    </button>
+                                </h2>
+                                <div id="collapseOneToken" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOneToken" data-bs-parent="#accordionFour">
+                                    <div class="accordion-body">
+                                        Blockchain is the general name of the transaction books in which the transaction records made are recorded in blocks. Blockchains are traceable and transparent. All transactions made are open to the public. This transparency provides trust
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwoToken">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwoToken" aria-expanded="false" aria-controls="collapseTwoToken">
+                                        What is the difference between coin and token?
+                                    </button>
+                                </h2>
+                                <div id="collapseTwoToken" class="accordion-collapse collapse" aria-labelledby="headingTwoToken"
+                                    data-bs-parent="#accordionFour">
+                                    <div class="accordion-body">
+                                        We call crypto assets that have their own block chain as coins, and crypto assets created by forking on any block chain are tokens..
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThreeToken">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThreeToken" aria-expanded="false"
+                                        aria-controls="collapseThreeToken">
+                                        How can do SIF Token?
+                                    </button>
+                                </h2>
+                                <div id="collapseThreeToken" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThreeToken" data-bs-parent="#accordionFour">
+                                    <div class="accordion-body">
+                                        We produced the SIF Token on the blockchain called Binance smart chain. The code for this fork is available on github. The reason we use this blockchain, known as BEP-20, is that it is a fast and low-cost network.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFourToken">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFourToken" aria-expanded="false"
+                                        aria-controls="collapseFourToken">
+                                        How many created SIF Token ?
+                                    </button>
+                                </h2>
+                                <div id="collapseFourToken" class="accordion-collapse collapse"
+                                    aria-labelledby="headingFourToken" data-bs-parent="#accordionFour">
+                                    <div class="accordion-body">
+                                        A total of 10,000,000,000 tokens were produced. 2,100,000,000 of this amount will be made available for use. You can reach the proportional distribution for use on our website. The unused amount will be kept in an idle wallet.
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="roadmap__list--item roadmap-done">
-                        <div class="roadmap__list--item--wrap">
-                            <h6 class="roadmap__title roadmap__title-2">Q1 2021</h6>
-                            <p>Distribution of SIF TOKEN within the ecosystem</p>
-                        </div>
-                    </div>
-                    <div class="roadmap__list--item roadmap__list--item--lg roadmap-done">
-                        <div class="roadmap__list--item--wrap">
-                            <h6 class="roadmap__title roadmap__title-2">Q2 2021</h6>
-                            <p>SIFTOKEN officially launches during SIF TOKEN launchpad ICO</p>
-                        </div>
-                    </div>
-                    <div class="roadmap__list--item roadmap-done">
-                        <div class="roadmap__list--item--wrap">
-                            <h6 class="roadmap__title roadmap__title-2">Q2 2021</h6>
-                            <p>SIF TOKEN List on major crypto decentralised exchanges</p>
-                        </div>
-                    </div>
-                    <div class="roadmap__list--item roadmap__list--item--sm">
-                        <div class="roadmap__list--item--wrap">
-                            <h6 class="roadmap__title roadmap__title-2">Q4 2021</h6>
-                            <p>SIF TOKEN evaluation and adding value in SIFIRINCIFILO</p>
-                        </div>
-                    </div>
-                    <div class="roadmap__list--item">
-                        <div class="roadmap__list--item--wrap">
-                            <h6 class="roadmap__title roadmap__title-2">Q1 2022</h6>
-                            <p>SIFTOKEN LISTING THE GLOBAL EXCHANGES</p>
-                        </div>
-                    </div>
-                    <div class="roadmap__list--item roadmap__list--item--lg">
-                        <div class="roadmap__list--item--wrap">
-                            <h6 class="roadmap__title roadmap__title-2">Q2 2022</h6>
-                            <p>Connecting the SIF TOKEN with major investment funds and partners</p>
-                        </div>
-                    </div>
-                    <div class="roadmap__list--item">
-                        <div class="roadmap__list--item--wrap">
-                            <h6 class="roadmap__title roadmap__title-2">2022</h6>
-                            <p>Establishing the sustainable global tokenisation ecosystem for people, firms and finance with
-                                SIF TOKEN as the reference currency</p>
+                    <div class="tab-pane container fade" id="legal">
+                        <div class="accordion accordion__custom" id="accordionFive">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOneLegal">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOneLegal" aria-expanded="true" aria-controls="collapseOneLegal">
+                                        Is crypto investment a crime?
+                                    </button>
+                                </h2>
+                                <div id="collapseOneLegal" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOneLegal" data-bs-parent="#accordionFive">
+                                    <div class="accordion-body">
+                                        In many countries and regions, trading in crypto assets is prohibited or prohibited. Consider the rules of the country of your citizenship.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwoLegal">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwoLegal" aria-expanded="false" aria-controls="collapseTwoLegal">
+                                        Are taxes paid for crypto assets?
+                                    </button>
+                                </h2>
+                                <div id="collapseTwoLegal" class="accordion-collapse collapse" aria-labelledby="headingTwoLegal"
+                                    data-bs-parent="#accordionFive">
+                                    <div class="accordion-body">
+                                        There is no known civil law on taxation. This situation can change at any time. For this reason, please follow the updated information from the official sources of your country of citizenship.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThreeLegal">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThreeLegal" aria-expanded="false"
+                                        aria-controls="collapseThreeLegal">
+                                        Can I get back the investment I made?
+                                    </button>
+                                </h2>
+                                <div id="collapseThreeLegal" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThreeLegal" data-bs-parent="#accordionFive">
+                                    <div class="accordion-body">
+                                        As a result of the change you have made, you will have to wait until the distribution process in order to prevent damage to both sides. Once your SIF Tokens are defined in your wallet, you will be able to sell them at the market price..
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFourLegal">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFourLegal" aria-expanded="false"
+                                        aria-controls="collapseFourLegal">
+                                        SIF Token Disclaimer
+                                    </button>
+                                </h2>
+                                <div id="collapseFourLegal" class="accordion-collapse collapse"
+                                    aria-labelledby="headingFourLegal" data-bs-parent="#accordionFive">
+                                    <div class="accordion-body">
+                                        We are not responsible for any loss or gain from your investments. If the laws of your country within the framework of legal rules prohibit investment on crypto assets, this is your problem. The SIF Token team does not accept any liability for taxing your investments. Your tax returns are your personal responsibility.
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -246,143 +431,10 @@
         </div>
     </section>
 
-    <section class="text-end">
-        <h1>Establishing the sustainable global tokenisation ecosystem for people, firms and finance with SIF TOKEN as the reference currency</h1>
-        <h1>test</h1>
-        <h1>test</h1>
-        <h1>test</h1>
-
-        <h1>test</h1>
-        <h1>test</h1>
-    </section>
-
     <script src="./assets/vendor/jquery/jquery.min.js"></script>
     <script src="./assets/vendor/bootstrap/js/bootstrap.min.js"></script>
     <script src="./assets/vendor/particles/particles.min.js"></script>
     <script src="./assets/js/main.js"></script>
-    <script>
-        var $particles_bg = $('.particles-bg');
-        if ($particles_bg.length > 0) {
-            $particles_bg.each(function () {
-                var $self = $(this), $self_id = $self.attr('id'),
-                    _pt_base = ($self.data('pt-base')) ? $self.data('pt-base') : '#fff',
-                    _pt_base_op = ($self.data('pt-base-op')) ? parseFloat($self.data('pt-base-op')) : 0.10,
-                    _pt_shape = ($self.data('pt-shape')) ? $self.data('pt-shape') : '#fff',
-                    _pt_shape_op = ($self.data('pt-shape-op')) ? parseFloat($self.data('pt-shape-op')) : 0.10,
-                    _pt_line = ($self.data('pt-line')) ? $self.data('pt-line') : '#fff',
-                    _pt_line_op = ($self.data('pt-line-op')) ? parseFloat($self.data('pt-line-op')) : 0.20;
-
-                particlesJS($self_id, {
-                    "particles": {
-                        "number": {
-                            "value": 30,
-                            "density": {
-                                "enable": true,
-                                "value_area": 800
-                            }
-                        },
-                        "color": {
-                            "value": _pt_base,
-                        },
-                        "shape": {
-                            "type": "circle",
-                            "opacity": _pt_shape_op,
-                            "stroke": {
-                                "width": 0,
-                                "color": _pt_shape,
-                            },
-                            "polygon": {
-                                "nb_sides": 5
-                            }
-                        },
-                        "opacity": {
-                            "value": _pt_base_op,
-                            "random": false,
-                            "anim": {
-                                "enable": false,
-                                "speed": 1,
-                                "opacity_min": 0.12,
-                                "sync": false
-                            }
-                        },
-                        "size": {
-                            "value": 6,
-                            "random": true,
-                            "anim": {
-                                "enable": false,
-                                "speed": 40,
-                                "size_min": 0.08,
-                                "sync": false
-                            }
-                        },
-                        "line_linked": {
-                            "enable": true,
-                            "distance": 150,
-                            "color": _pt_line,
-                            "opacity": _pt_line_op,
-                            "width": 1.3
-                        },
-                        "move": {
-                            "enable": true,
-                            "speed": 6,
-                            "direction": "none",
-                            "random": false,
-                            "straight": false,
-                            "out_mode": "out",
-                            "bounce": false,
-                            "attract": {
-                                "enable": false,
-                                "rotateX": 600,
-                                "rotateY": 1200
-                            }
-                        }
-                    },
-                    "interactivity": {
-                        "detect_on": "canvas",
-                        "events": {
-                            "onhover": {
-                                "enable": true,
-                                "mode": "repulse"
-                            },
-                            "onclick": {
-                                "enable": true,
-                                "mode": "push"
-                            },
-                            "resize": true
-                        },
-                        "modes": {
-                            "grab": {
-                                "distance": 400,
-                                "line_linked": {
-                                    "opacity": 1
-                                }
-                            },
-                            "bubble": {
-                                "distance": 400,
-                                "size": 40,
-                                "duration": 2,
-                                "opacity": 8,
-                                "speed": 3
-                            },
-                            "repulse": {
-                                "distance": 200,
-                                "duration": 0.4
-                            },
-                            "push": {
-                                "particles_nb": 4
-                            },
-                            "remove": {
-                                "particles_nb": 2
-                            }
-                        }
-                    },
-                    "retina_detect": true
-                }
-                    // Stop here.
-                );
-            });
-        }
-    </script>
 </body>
 
 </html>

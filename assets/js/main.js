@@ -171,7 +171,10 @@
             var $collapsed = $(".fixed-top").find('.navbar-toggler');
             $nav.toggleClass('scrolled', $(document).scrollTop() > $nav.height() || $collapsed.attr('aria-expanded') === "true");
         });
-        $('.nav-link').on('click', function () {
+        $(".nav-link").not('.dropdown-toggle').on('click', function () {
+            $('.navbar-collapse').collapse('hide');
+        });
+        $(".dropdown-item").on('click', function () {
             $('.navbar-collapse').collapse('hide');
         });
     });

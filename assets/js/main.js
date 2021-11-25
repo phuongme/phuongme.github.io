@@ -166,5 +166,10 @@
             var $nav = $(".fixed-top");
             $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
         });
+        $('.navbar-toggler').click(function() {
+            var $nav = $(".fixed-top");
+            var $collapsed = $(".fixed-top").find('.navbar-toggler');
+            $nav.toggleClass('scrolled', $(document).scrollTop() > $nav.height() || $collapsed.attr('aria-expanded') === "true");
+        });
     });
 })(document, $);

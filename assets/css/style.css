@@ -224,7 +224,7 @@ body {
 }
 
 .fixed-top.scrolled {
-  background: black !important;
+  background: black;
   transition: all .4s;
   box-shadow: 0 0 20px 0 rgb(18 24 58 / 8%);
 }
@@ -580,7 +580,7 @@ body {
   background: #7a0fff;
 }
 
-.roadmap__wrap, #sale, #team {
+.roadmap__wrap, #sale, #team, #partner, #contact {
   overflow: hidden;
 }
 
@@ -872,9 +872,20 @@ body {
   }
 }
 
-@media (max-width: 992px) {}
+@media (max-width: 992px) {
+  .fixed-top.scrolled {
+    background: #171a40 !important;
+  }
+}
 
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+  .mt-8 {
+    margin-top: 5rem;
+  }
+  .contact.space-x-8>:not([hidden])~:not([hidden]) {
+    margin-left: 0 !important;
+  }
+}
 
 @media (max-width: 576px) {}
 

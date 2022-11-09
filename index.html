@@ -2,18 +2,28 @@
 <html>
   <head>
     <title>Tui yêu em</title>
-    <meta charset="utf-8">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600&display=swap" rel="stylesheet">
-    <link href="css/main.css?v=3" rel="stylesheet">
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/main.css?v=3" rel="stylesheet" />
   </head>
 
   <body>
-    <iframe src="./mp3/silence.mp3" type="audio/mp3" allow="autoplay" id="audio" style="display: none"></iframe>
-    <video autoplay loop muted>
+    <iframe
+      src="./mp3/silence.mp3"
+      type="audio/mp3"
+      allow="autoplay"
+      id="audio"
+      style="display: none"
+    ></iframe>
+    <audio id="videoId" autoplay>
       <source src="./mp3/AnhYeuEmCuc.mp3" type="audio/mp3" />
-  </video>
+    </audio>
     <!-- 星空html -->
     <!-- <div> -->
     <div class="container2">
@@ -36,8 +46,13 @@
     <script src="js/universe.js"></script>
     <script>
       window.onload = function () {
-          document.querySelector("video").muted = false;
+        document.getElementById("videoId").play();
       };
-  </script>
+      document.addEventListener("click", musicPlay);
+      function musicPlay() {
+        document.getElementById("videoId").play();
+        document.removeEventListener("click", musicPlay);
+      }
+    </script>
   </body>
 </html>
